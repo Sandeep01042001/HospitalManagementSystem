@@ -2,6 +2,7 @@ package com.AccioJob.HMS.model;
 
 
 import lombok.*;
+import java.util.*;
 
 @Getter
 @Setter
@@ -16,5 +17,7 @@ public class Doctor {
     String degree;
     String specialties;
     long phoneNumber;
+    List<Hospital> assignHospitals;
+    List<Pacent> assignPacents;
 
 }
