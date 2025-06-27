@@ -20,4 +20,5 @@ public class Doctor {
     List<Hospital> assignHospitals;
     List<Pacent> assignPacents;
 
+
 }

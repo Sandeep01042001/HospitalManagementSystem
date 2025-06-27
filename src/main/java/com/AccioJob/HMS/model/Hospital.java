@@ -15,6 +15,7 @@ public class Hospital {
     String email;
     String webSite;
     long phoneNumber;
+    Set<String> diseases;
     List<Doctor> doctors;
     List<Pacent> pacents;
 }

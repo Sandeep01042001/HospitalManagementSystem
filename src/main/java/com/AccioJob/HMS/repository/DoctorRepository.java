@@ -21,4 +21,8 @@ public class DoctorRepository {
         this.doctorDB.put(id, doctor);
     }
 
+    public Doctor getDoctorDetails(int id){
+        return this.doctorDB.get(id);
+    }
+
 }

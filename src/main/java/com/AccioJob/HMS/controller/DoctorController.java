@@ -4,10 +4,7 @@ import com.AccioJob.HMS.model.Doctor;
 import com.AccioJob.HMS.service.DoctorService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/doctor")
@@ -21,6 +18,11 @@ public class DoctorController {
     @PostMapping("/register")
     public void registerDoctor(@RequestBody Doctor doctor){
         doctorService.registerDoctor(doctor);
+    }
+
+    @GetMapping("/get/{id}")
+    public Doctor getDoctorDetails(@PathVariable int id){
+        return doctorService.getDoctorDetails(id);
     }
 
 
